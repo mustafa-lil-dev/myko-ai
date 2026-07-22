@@ -27,13 +27,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '22.14.0'
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Debug Node version
+        run: node -v
 
-      - name: Install pnpm
-        run: corepack prepare pnpm@latest --activate
+      - name: install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
 
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
