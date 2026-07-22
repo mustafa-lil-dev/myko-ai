@@ -29,11 +29,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: install pnpm
+      - name: Install pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
-          run_install: false
 
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
@@ -52,8 +49,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: __VERSION__
-          releaseName: "Myko v__VERSION__"
+          tagName: v0.1.0
+          releaseName: "Myko v0.1.0"
           releaseBody: "Automated release for Myko."
           releaseDraft: false
           prerelease: false
