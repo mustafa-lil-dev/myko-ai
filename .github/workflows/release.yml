@@ -1,5 +1,4 @@
 name: "Publish Release"
-
 on:
   push:
     tags:
@@ -15,15 +14,13 @@ jobs:
         include:
           - platform: macos-latest
             args: ''
-          - platform: ubuntu-22_04
+          - platform: ubuntu-22.04
             args: ''
           - platform: windows-latest
             args: ''
-
     runs-on: ${{ matrix.platform }}
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
-
     steps:
       - uses: actions/checkout@v4
 
@@ -42,10 +39,10 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: install dependencies (linux only)
-        if: matrix.platform == 'ubuntu-22_04'
+        if: matrix.platform == 'ubuntu-22.04'
         run: |
           sudo apt-get update
-          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev patchelf
 
       - name: install frontend dependencies
         run: pnpm install
@@ -55,8 +52,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: v0.1.0
-          releaseName: "Myko v0.1.0"
+          tagName: ${{ github.ref_name }}
+          releaseName: "Myko ${{ github.ref_name }}"
           releaseBody: "Automated release for Myko."
           releaseDraft: false
           prerelease: false
