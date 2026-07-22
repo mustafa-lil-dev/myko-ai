@@ -24,14 +24,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: setup node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: 'pnpm'
+          node-version: '22'
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        run: corepack prepare pnpm@latest --activate
 
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
