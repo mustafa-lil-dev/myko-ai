@@ -1,12 +1,18 @@
+<div align="center">
+  <img src="public/logo.png" width="144" height="144" alt="Myko" />
+  <h1>Myko</h1>
 
-  Myko
+  <p><strong>Lightweight Terminal-first AI-native dev workspace.</strong></p>
 
-  Lightweight Terminal-first AI-native dev workspace.
+  <p>
+    <img src="https://img.shields.io/badge/author-Mustafa%20Khoso-blue" alt="author" />
+    <img src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey" alt="platform" />
+  </p>
 
-      https://img.shields.io/badge/author-Mustafa%20Khoso-blue" alt="author" />    https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey" alt="platform" />  
-
-      https://github.com/mustafa-lil-dev/myko-ai">GitHub Repository  
-
+  <p>
+    <a href="https://github.com/mustafa-lil-dev/myko-ai">GitHub Repository</a>
+  </p>
+</div>
 
 ---
 
@@ -14,20 +20,20 @@ Myko is a lightweight open-source terminal workspace (ADE) built on Tauri 2 + Ru
 
 ## Screenshots
 
-
-  
-    Multi-tab terminal with WebGL rendering
-    Custom themes, presets, and background images
-  
-  
-    Powerful code editor with multiple themes and tabs
-    Web preview of local dev servers
-  
-  
-    Source control panel with git graph in history
-    Agentic AI workflow with edit diffs in the code editor
-  
-
+<table>
+  <tr>
+    <td align="center"><img src="docs/terminal.png" alt="Terminal" /><br/><sub>Multi-tab terminal with WebGL rendering</sub></td>
+    <td align="center"><img src="docs/themes.png" alt="Themes and background image" /><br/><sub>Custom themes, presets, and background images</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/editor.png" alt="Code Editor" /><br/><sub>Powerful code editor with multiple themes and tabs</sub></td>
+    <td align="center"><img src="docs/web-preview.png" alt="Web preview" /><br/><sub>Web preview of local dev servers</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/source-control.png" alt="Source control and git graph" /><br/><sub>Source control panel with git graph in history</sub></td>
+    <td align="center"><img src="docs/ai-workflow.png" alt="AI workflow" /><br/><sub>Agentic AI workflow with edit diffs in the code editor</sub></td>
+  </tr>
+</table>
 
 ## Features
 
@@ -84,7 +90,7 @@ Myko is a lightweight open-source terminal workspace (ADE) built on Tauri 2 + Ru
 
 ## Install
 
-Latest installers are available on the Releases page. Myko auto-updates from there.
+Latest installers are available on the [Releases](https://github.com/mustafa-lil-dev/myko-ai/releases/latest) page. Myko auto-updates from there.
 
 ### Windows notes
 
@@ -106,7 +112,7 @@ Latest installers are available on the Releases page. Myko auto-updates from the
 
 **Prerequisites**
 - Rust (stable), https://rustup.rs
-- Node 20+ and pnpm
+- Node 20+ and [pnpm](https://pnpm.io)
 - Tauri prerequisites for your platform, https://tauri.app/start/prerequisites/
 
 **Run**
@@ -114,25 +120,9 @@ Latest installers are available on the Releases page. Myko auto-updates from the
 pnpm install
 pnpm tauri dev        # development
 pnpm tauri build      # production bundle
-```
 
-**Checks**
-```bash
-pnpm lint
-pnpm check-types
-pnpm test
-cd src-tauri && cargo clippy --all-targets --locked -- -D warnings   # Rust lint
-cd src-tauri && cargo nextest run --locked                           # or: cargo test --locked
-```
+Tech stack
+Tauri 2, Rust, portable-pty, React 19, TypeScript, Vite, xterm.js, CodeMirror 6, Vercel AI SDK v6, Tailwind v4, shadcn/ui, Zustand.
 
-## Tech stack
-
-Tauri 2, Rust, `portable-pty`, React 19, TypeScript, Vite, xterm.js, CodeMirror 6, Vercel AI SDK v6, Tailwind v4, shadcn/ui, Zustand.
-
-## Author
-
-**Mustafa**
-
-## Contributing
-
-Issues and PRs are welcome! Feel free to open issues, suggest features, or submit pull requests.
+Author
+Mustafa Khoso
