@@ -5,7 +5,7 @@
   <p><strong>Lightweight Terminal-first AI-native dev workspace.</strong></p>
 
   <p>
-    <img src="https://img.shields.io/badge/author-Mustafa%20Khoso-blue" alt="author" />
+    <img src="https://img.shields.io/badge/author-Mustafa%20-blue" alt="author" />
     <img src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey" alt="platform" />
   </p>
 
