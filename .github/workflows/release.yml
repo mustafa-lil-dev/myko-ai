@@ -25,29 +25,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js v22
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '22.14.0'
 
-      - name: Install pnpm v10 (Stable Node 20/22 Compatible)
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.34.2
+      - name: Enable Corepack
+        run: corepack enable
 
-      - name: install Rust stable
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: install dependencies (linux only)
+      - name: Install dependencies (linux only)
         if: matrix.platform == 'ubuntu-22.04'
         run: |
           sudo apt-get update
           sudo apt-get install -y libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev patchelf
 
-      - name: install frontend dependencies
+      - name: Install Rust stable
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install frontend dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: run tauri build and publish
+      - name: Run Tauri build and publish
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
