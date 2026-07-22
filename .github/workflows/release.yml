@@ -25,10 +25,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js 20
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
 
       - name: Install Rust stable
         uses: dtolnay/rust-toolchain@stable
@@ -39,8 +42,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev patchelf
 
-      - name: Install frontend dependencies via npx pnpm
-        run: npx --yes pnpm@9.15.0 install --no-frozen-lockfile
+      - name: Install frontend dependencies
+        run: pnpm install --frozen-lockfile=false
 
       - name: Run Tauri build and publish
         uses: tauri-apps/tauri-action@v0
