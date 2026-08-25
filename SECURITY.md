@@ -2,17 +2,20 @@
 
 ## Supported Versions
 
-Use the table below to check which versions of Myko AI are currently receiving security updates:
+Use this section to tell people about which versions of your project are
+currently being supported with security updates.
 
-| Version | Supported |
-| ------- | --------- |
-| 1.x.x   | :white_check_mark: |
-| < 1.0   | :x:       |
+| Version | Supported          |
+| ------- | ------------------ |
+| 5.1.x   | :white_check_mark: |
+| 5.0.x   | :x:                |
+| 4.0.x   | :white_check_mark: |
+| < 4.0   | :x:                |
 
 ## Reporting a Vulnerability
 
-We take the security of Myko AI seriously. If you discover a security vulnerability, please report it privately rather than opening a public issue.
+Use this section to tell people how to report a vulnerability.
 
-* **Where to report:** Send an email to your security contact or open a private security advisory on GitHub.
-* **What to include:** Please provide a description of the vulnerability, steps to reproduce, and potential impact.
-* **Response timeline:** You can expect an initial acknowledgment of your report within 48 hours, followed by updates on the remediation progress.
+Tell them where to go, how often they can expect to get an update on a
+reported vulnerability, what to expect if the vulnerability is accepted or
+declined, etc.
