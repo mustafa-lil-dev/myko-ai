@@ -1,4 +1,5 @@
 name: Release
+
 on:
   push:
     tags:
@@ -30,12 +31,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
 
-      # Set up Node.js LTS (Fixes the Node version problem)
+      # Set up Node.js LTS
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: 'pnpm' # Change to 'npm' or 'yarn' if you use those instead
+          cache: 'pnpm'
 
       # Set up Rust toolchain
       - name: Setup Rust
