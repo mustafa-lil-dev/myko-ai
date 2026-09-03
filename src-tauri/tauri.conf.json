@@ -104,7 +104,7 @@
   },
   "plugins": {
     "updater": {
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEM4N0UyNUZCMjc4OTE1N0UKUldSK0ZZa24reVYreUJybldjZzUrRFIwRXFxc2hpVFM5eGtOb3dvNG1BZnlTTFFmczVQQXpCazYK",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFDNDc1NDJBREUzNDlGRUIKUldUcm56VGVLbFJISE80WnZZcllRb2J3WWRoNUVja1FkUjkwZ2lnalVDM0N0RUt5QlNiK2doY0UK",
       "endpoints": [
         "https://github.com/YOUR_GITHUB_ORG/myko/releases/latest/download/latest.json"
       ]
